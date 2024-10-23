@@ -237,12 +237,3 @@ body{
 .swiper-pagination-bullet-active{
   background-color: #4070F4;
 }
-
-@media screen and (max-width: 768px) {
-  .slide-content{
-    margin: 0 10px;
-  }
-  .swiper-navBtn{
-    display: none;
-  }
-}
