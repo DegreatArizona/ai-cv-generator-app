@@ -19,6 +19,7 @@
     }
     .hero-sub-section{
         margin-right: 20px;
+        gap: 20px;
     }
     .hero-section{
         padding: 50px;
