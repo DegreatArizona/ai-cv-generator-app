@@ -116,22 +116,3 @@ body{
     align-items: center;
 }
 
-
-
-
-
-.card-title {
-    color: #db0075;
-}
-.card-text {
-    color: #17E6E6;
-}
-.list-inline-item {
-    color: #ffd700
-}
-.price {
-    color: #d92644;
-}
-.btn-pink {
-    background-color: #fcb2b2 !important;
-}
