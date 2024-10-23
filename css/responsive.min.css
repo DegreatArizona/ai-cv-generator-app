@@ -12,6 +12,9 @@
     .feature-body .row .feature-card{
         width: 100%;
     }
+    .slide-content{
+        margin: 0 10px;
+    }
 }
 @media (min-width: 769px) /*PC*/ {
     .hero-head{
