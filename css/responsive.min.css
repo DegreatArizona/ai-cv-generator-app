@@ -4,6 +4,7 @@
     }
     .hero-sub-section img{
         height: 400px;
+        width: 100%;
     }
     .how-body .row .how-card{
         width: 100%;
