@@ -5,9 +5,6 @@
     .hero-sub-section img{
         height: 400px;
     }
-    .hero-section{
-        padding: 20px;
-    }
 }
 @media (min-width: 769px) /*PC*/ {
     .hero-head{
