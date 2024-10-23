@@ -1,1 +1,26 @@
-
+@media (max-width: 768px) /*Mobile*/ {
+    .hero-sub-section{
+        padding: 0;
+    }
+    .hero-sub-section img{
+        height: 400px;
+    }
+    .hero-section{
+        padding: 20px;
+    }
+}
+@media (min-width: 769px) /*PC*/ {
+    .hero-head{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+        margin-top: 80px;
+    }
+    .hero-sub-section img{
+        height: 600px;
+    }
+    .hero-section{
+        padding: 50px;
+    }
+}
