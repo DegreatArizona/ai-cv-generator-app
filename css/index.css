@@ -41,7 +41,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 48px;
     align-items: center;
     gap: 34px;
     align-self: stretch;
@@ -84,7 +83,6 @@ body{
     align-items: flex-start;
     gap: 48px;
     align-items: center;
-    gap: 34px;
     align-self: stretch;
 }
 .feature-head h2{
