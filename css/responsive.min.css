@@ -5,6 +5,12 @@
     .hero-sub-section img{
         height: 400px;
     }
+    .how-body .row .how-card{
+        width: 100%;
+    }
+    .feature-body .row .feature-card{
+        width: 100%;
+    }
 }
 @media (min-width: 769px) /*PC*/ {
     .hero-head{
