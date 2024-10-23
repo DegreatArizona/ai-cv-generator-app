@@ -1,0 +1,32 @@
+@media (max-width: 768px) /*Mobile*/{
+  .nav-btn{
+    width: 100%;
+  }
+  .hero .hero-head{
+  text-align: center;
+}
+.skills-section {
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 28px;
+}
+
+.skills-label {
+  font-size: 18px;
+}
+
+.skill-card {
+  margin-bottom: 20px;
+}
+}
+@media (min-width: 769px) /*PC*/{
+  .nav-btn{
+    width: 180px;
+  }
+  .cta-buttons button {
+  margin: 10px 10px;
+  width: 40%;
+}
+}
