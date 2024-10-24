@@ -66,7 +66,7 @@ body{
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .how-body .row .card-img-top{
     display: flex;
@@ -107,7 +107,7 @@ body{
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .feature-body .row .card-img-top{
     display: flex;
@@ -272,7 +272,7 @@ body{
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .faq-body .accordion-item {
   border: none;
@@ -330,7 +330,7 @@ body{
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .carousel-item .card{
   background: #0A74DA99;
@@ -360,7 +360,7 @@ body{
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
     .footer {
       margin-top: 30px;
