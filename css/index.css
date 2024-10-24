@@ -157,7 +157,7 @@ body{
 .plan-body .description{
   list-style-image: url('/image/checkmark.svg');
   list-style-type: none;
-  line-height: 25px;
+  line-height: 35px;
 }
 .plan-body .description li{
   color: #212121;
@@ -302,9 +302,6 @@ body{
   border-color: rgba(0, 0, 0, .125);
 }
 .test-section{
-
-  background: var(--gredient);
-
   padding: 30px;
 }
 .test-head h2{
