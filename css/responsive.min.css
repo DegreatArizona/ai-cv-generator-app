@@ -26,6 +26,7 @@
     }
     .hero-sub-section img{
         height: 550px;
+        width: 100%;
     }
     .hero-sub-section{
         padding-right: 20px;
