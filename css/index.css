@@ -157,7 +157,7 @@ body{
 .plan-body .description{
   list-style-image: url('/image/checkmark.svg');
   list-style-type: none;
-  line-height: 20px;
+  line-height: 25px;
 }
 .plan-body .description li{
   color: #212121;
@@ -176,8 +176,7 @@ body{
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 100%;
-  margin: 5px;
+  width: 99%;
 }
 .plan-body .button:hover{
   background: #4070F4;
@@ -202,12 +201,13 @@ body{
 .plan-body .swiper-pagination-bullet{
   background-color: #6E93f7;
   opacity: 1;
+  margin-top: 30px;
 }
 .plan-body .swiper-pagination-bullet-active{
   background-color: #4070F4;
 }
 .plan-body .card-body{
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 .plan-body .card-body span:nth-child(2){
   color: #212121;
