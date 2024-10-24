@@ -11,42 +11,43 @@
     <link
       rel="stylesheet"
       href="../../../../JAY CEE/MY WORK/WEB/Assets/fontawesome-free-6.1.1-web/css/all.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/signup.css" />
   </head>
   <body>
-    <form action="">
+    <form action="" id="DriverForm">
       <header>
-        <h1>Create an account</h1>
-        <p>Already have an account?<a href="">log in</a></p>
+        <h2>Create an account</h2>
+        <p>Already have an account? <a href="Login.html">Log in</a></p>
         <!-- Enter the url for the login page -->
+        <section class="account-type-container">
+          <label class="account-type-label">Account Type:</label>
+          <div class="radio-control">
+            <label for="driver" class="input-label">Driver</label>
+            <input type="radio" id="driver" name="account_type" />
+          </div>
+          <div class="radio-control">
+            <label for="mechanic" class="input-label">Mechanic</label>
+            <input type="radio" id="mechanic" name="account_type" />
+          </div>
+        </section>
       </header>
-      <section class="account-type-container">
-        <label class="account_type_label">Account Type:</label>
-        <div class="input-control">
-          <label for="account_type">Driver</label>
-          <input type="radio" id="account_type" name="account_type" />
-        </div>
-        <div class="input-control">
-          <label for="account_type">Mechanic</label>
-          <input type="radio" id="account_type" name="account_type" />
-        </div>
-      </section>
       <main>
-        <div class="input-control">
-          <label for="name">What's your name?</label>
+        <div class="input-field">
+          <label for="name" class="input-label">What's your name?</label>
           <input type="text" id="name" placeholder="Enter your name" />
         </div>
-        <div class="input-control">
-          <label for="email">What's your email?</label>
+        <div class="input-field">
+          <label for="email" class="input-label">What's your email?</label>
           <input
             type="email"
             id="email"
             placeholder="Enter your email address" />
         </div>
-        <div class="input-control">
-          <div>
-            <label for="password">Create a password</label>
-            <button type="button"><i class="fa fa-eyeslash"></i> Hide</button>
+        <div class="input-field">
+          <div class="password-container">
+            <label for="password" class="input-label">Create a password</label>
+            <button type="button"><i class="fa fa-eye"></i> Show</button>
           </div>
           <input
             type="password"
@@ -57,14 +58,14 @@
             symbols</small
           >
         </div>
+        <section class="submit-container">
+          <p>
+            By creating an account you agree to the Terms of use and Privacy
+            Policy.
+          </p>
+          <button type="submit">Create an account</button>
+        </section>
       </main>
-      <section>
-        <p>
-          By creating an account you agree to the Terms of use and Privacy
-          Policy.
-        </p>
-        <button type="submit">Create an account</button>
-      </section>
       <section class="nav-container">
         <div class="divider">OR</div>
         <nav>
