@@ -169,7 +169,6 @@ body {
   box-shadow: -25px 162px 46px 0px rgba(0, 0, 0, 0),
     -4px 3px 26px 0px rgba(0, 0, 0, 0.09);
   padding: 7px 0px;
-  margin-top: 30px;
 }
 .status{
     color: rgba(67, 160, 71, 0.90);
@@ -179,19 +178,16 @@ body {
     border-radius: 10.55px;
     background: rgba(67, 160, 71, 0.20);
     padding: 4px;
+    margin-bottom: 30px;
+    width: 40%;
+    text-align: center;
 }
 .progress-status{
-    display: flex;
-    width: 106.023px;
-    flex-direction: column;
-    align-items: flex-start;
     gap: 19.634px;
 }
-.progress-bar-status{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.progress-bar-status .progress{
     gap: 19.634px;
+    margin-bottom: 15px;
 }
 .feed{
     margin-top: 30px;
@@ -294,12 +290,15 @@ body {
     line-height: 24px;
     border-radius: 5px;
   }
-  .head-boot2 .row .col-lg-auto{
+  .head-boot2 .row .col-md-6, .col-md-auto{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .head-boot2{
+    margin-top: 30px;
   }
 }
 @media (min-width: 769px) /*PC*/ {
