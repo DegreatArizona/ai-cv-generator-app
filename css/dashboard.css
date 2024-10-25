@@ -295,6 +295,11 @@ body {
     line-height: 24px;
     border-radius: 5px;
   }
+  .head-boot2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: colunm;
+  }
 }
 @media (min-width: 769px) /*PC*/ {
   .navbar-nav .nav-item .actives {
