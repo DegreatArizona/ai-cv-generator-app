@@ -243,13 +243,13 @@
                 <div class="head-boot2">
                   <div class="container">
                     <div class="row">
-                      <div class="col-lg-auto">
+                      <div class="col-md-6">
                         <img src="/image/user.png"
                           class="img-fluid rounded-top"
                           alt=""
                         />
                       </div>
-                      <div class="col-lg-auto">
+                      <div class="col-md-auto">
                         <h2>Gift Bassey</h2>
                         <div class="f">
                           <p>gift.bassey@gmail.com</p>
@@ -259,6 +259,8 @@
                           <p>Toyota Camry 2019</p>
                           <p>License No: AB123XY</p>
                         </div>
+                        <a name="" id="" class="btn btn-primary" href="#" role="button"
+                >Editm Profile <i class="fa fa-edit" aria-hidden="true"></i></a>
                       </div>
                     </div>
                   </div>
@@ -274,55 +276,54 @@
             <div class="col-md-9">
               <div class="table-feed">
                 <div class="table-head">
-                    <div class="filter"><i class="fa fa-filter" aria-hidden="true"></i> More Filter</div>
-                    <div class="d-flex my-2 my-lg-0">
-                        <input
-                          class="form-control me-sm-2"
-                          type="search"
-                          id="searchInput"
-                          placeholder="Search"
-                        />
+                  <div class="filter dropdown">
+                    <button class="btn btn-white dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-filter" aria-hidden="true"></i> More Filter
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+                      <h6 class="dropdown-header">Filter By Status</h6>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="javascriptvoid:(0)" onclick="filterTableByStatus('Completed')">Completed</a>
+                      <a class="dropdown-item" href="javascriptvoid:(0)" onclick="filterTableByStatus('Cancelled')">Cancelled</a>
+                      <a class="dropdown-item" href="javascriptvoid:(0)" onclick="filterTableByStatus('')">All</a>
                     </div>
+                  </div>
+                  <div class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="search" id="searchInput" placeholder="Search">
+                  </div>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th>Request ID</th>
-                      <th>Vehicle</th>
-                      <th>Service</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tableBody">
-                    <tr>
-                      <td>123456</td>
-                      <td>Toyota Camry 2019</td>
-                      <td>Towing</td>
-                      <td>Nov 3, 2024</td>
-                      <td><span class="table-success-status">Completed</span></td>
-                      <td>
-                        <button href="#" class="btn btn-outline-primary"
-                          >View Receipt</
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>123456</td>
-                      <td>Toyota Camry 2019</td>
-                      <td>Towing</td>
-                      <td>Nov 3, 2024</td>
-                      <td><span class="table-danger-status">Cancelled</span></td>
-                      <td>
-                        <button href="#" class="btn btn-outline-primary"
-                          >View Receipt</
-                        >
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Request ID</th>
+                        <th>Vehicle</th>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                      <tr>
+                        <td>123456</td>
+                        <td>Toyota Camry 2019</td>
+                        <td>Towing</td>
+                        <td>Nov 3, 2024</td>
+                        <td><span class="table-success-status">Completed</span></td>
+                        <td><button href="#" class="btn btn-outline-primary">View Receipt</button></td>
+                      </tr>
+                      <tr>
+                        <td>123457</td>
+                        <td>Toyota Camry 2019</td>
+                        <td>Towing</td>
+                        <td>Nov 3, 2024</td>
+                        <td><span class="table-danger-status">Cancelled</span></td>
+                        <td><button href="#" class="btn btn-outline-primary">View Receipt</button></td>
+                      </tr>
+                      <!-- Add more rows as needed -->
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -332,11 +333,6 @@
                         Notifications
                     </div>
                     <div class="notify-body">
-                        <div class="notify-content">
-                            <img src="/image/BugBeetle.svg" alt="">
-                            <p>Your invoice for Toyota Camry 2019 (Towing) service is ready. Total: ₦15,000.</p>
-                            <span>Just now</span>
-                        </div>
                         <div class="notify-content">
                             <img src="/image/BugBeetle.svg" alt="">
                             <p>Your invoice for Toyota Camry 2019 (Towing) service is ready. Total: ₦15,000.</p>
@@ -366,6 +362,19 @@
             });
           });
         });
+
+        function filterTableByStatus(status) {
+      const rows = document.querySelectorAll("#tableBody tr");
+
+      rows.forEach(row => {
+        const statusCell = row.querySelector("td:nth-child(5) span");
+        if (status === "" || statusCell.textContent === status) {
+          row.style.display = ""; 
+        } else {
+          row.style.display = "none"; 
+        }
+      });
+    }
         </script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
