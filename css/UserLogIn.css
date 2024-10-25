@@ -193,7 +193,10 @@ label {
     .divider {
         font-size: 1rem; 
     }
-}
+@media (max-width: 600px) { 
+    .password-container {
+        justify-content: flex-end; 
+            }
 
 @media (max-width: 480px) {
     h1 {
