@@ -8,23 +8,22 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link
-      rel="stylesheet"
-      href="../../../../JAY CEE/MY WORK/WEB/Assets/fontawesome-free-6.1.1-web/css/all.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/signup.css" />
+    <!-- script for the sign up page -->
+    <script defer src="js/signup.js"></script>
   </head>
   <body>
-    <form action="" id="DriverForm">
+    <main id="user-form-container">
       <header>
         <h2>Create an account</h2>
-        <p>Already have an account? <a href="Login.html">Log in</a></p>
+        <p>Already have an account? <a href="LogIn.html">Log in</a></p>
         <!-- Enter the url for the login page -->
         <section class="account-type-container">
           <label class="account-type-label">Account Type:</label>
           <div class="radio-control">
             <label for="driver" class="input-label">Driver</label>
-            <input type="radio" id="driver" name="account_type" />
+            <input type="radio" id="driver" name="account_type" checked />
           </div>
           <div class="radio-control">
             <label for="mechanic" class="input-label">Mechanic</label>
@@ -32,40 +31,173 @@
           </div>
         </section>
       </header>
-      <main>
-        <div class="input-field">
-          <label for="name" class="input-label">What's your name?</label>
-          <input type="text" id="name" placeholder="Enter your name" />
-        </div>
-        <div class="input-field">
-          <label for="email" class="input-label">What's your email?</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email address" />
-        </div>
-        <div class="input-field">
-          <div class="password-container">
-            <label for="password" class="input-label">Create a password</label>
-            <button type="button"><i class="fa fa-eye"></i> Show</button>
+
+      <!-- Driver's Form -->
+      <section class="form-group">
+        <form action="" id="DriverForm" class="active">
+          <div class="input-field">
+            <label for="name" class="input-label">What's your name?</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required />
           </div>
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter your password" />
-          <small
-            >Use 8 or more characters with a mix of letters, numbers &
-            symbols</small
-          >
-        </div>
-        <section class="submit-container">
-          <p>
-            By creating an account you agree to the Terms of use and Privacy
-            Policy.
-          </p>
-          <button type="submit">Create an account</button>
-        </section>
-      </main>
+          <div class="input-field">
+            <label for="email" class="input-label">What's your email?</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              required />
+          </div>
+          <div class="input-field">
+            <div class="password-container">
+              <label for="password1" class="input-label"
+                >Create a password</label
+              >
+              <span class="show-password"><i class="fa fa-eye"></i> Show </span>
+            </div>
+            <input
+              type="password"
+              id="password1"
+              placeholder="Enter your password"
+              minlength="8"
+              required />
+            <small
+              >Use 8 or more characters with a mix of letters, numbers &
+              symbols</small
+            >
+          </div>
+          <section class="submit-container">
+            <p>
+              By creating an account you agree to the Terms of use and Privacy
+              Policy.
+            </p>
+            <button type="submit">Create an account</button>
+          </section>
+        </form>
+
+        <!-- Mechanic's Form -->
+        <form action="" id="MechanicForm">
+          <div class="input-field">
+            <label for="name" class="input-label">What's your name?</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required />
+          </div>
+          <div class="input-field">
+            <label for="email" class="input-label">What's your email?</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              required />
+          </div>
+          <div class="input-field">
+            <div class="password-container">
+              <label for="password2" class="input-label"
+                >Create a password</label
+              >
+              <span class="show-password"><i class="fa fa-eye"></i> Show</span>
+            </div>
+            <input
+              type="password"
+              id="password2"
+              placeholder="Enter your password"
+              minlength="8"
+              required />
+            <small
+              >Use 8 or more characters with a mix of letters, numbers &
+              symbols</small
+            >
+          </div>
+
+          <!-- Service Specializations -->
+          <section class="specialty-container">
+            <h3>Service Specializations</h3>
+            <article class="specialties">
+              <div class="checkbox-control">
+                <label for="tire_repair" class="input-label">Tire Repair</label>
+                <input type="checkbox" name="tire_repair" id="tire_repair" />
+              </div>
+              <div class="checkbox-control">
+                <label for="towing" class="input-label">Towing Service</label>
+                <input type="checkbox" name="towing" id="towing" />
+              </div>
+              <div class="checkbox-control">
+                <label for="jumpstart" class="input-label"
+                  >Battery Jumpstart</label
+                >
+                <input type="checkbox" name="jumpstart" id="jumpstart" />
+              </div>
+              <div class="checkbox-control">
+                <label for="electricals" class="input-label"
+                  >Electrical Issues</label
+                >
+                <input type="checkbox" name="electricals" id="electricals" />
+              </div>
+              <div class="checkbox-control">
+                <label for="engine_repair" class="input-label"
+                  >Engine Repair</label
+                >
+                <input
+                  type="checkbox"
+                  name="engine_repair"
+                  id="engine_repair" />
+              </div>
+              <div class="checkbox-control">
+                <label for="body_work" class="input-label"
+                  >Bodywork/Collision Repair</label
+                >
+                <input type="checkbox" name="body_work" id="body_work" />
+              </div>
+              <div class="checkbox-control">
+                <label for="general" class="input-label"
+                  >General Mechanics/All Services</label
+                >
+                <input type="checkbox" name="general" id="general" />
+              </div>
+            </article>
+          </section>
+
+          <!-- Business License -->
+          <section class="license">
+            <h3>Business License</h3>
+            <div class="upload-container">
+              <label for="upload" class="upload-label">
+                <img src="image/file-add.svg" alt="file upload" />
+                <input type="file" id="upload" hidden />
+                Click to upload
+              </label>
+              <!-- <img src="" alt="Click to upload" /> -->
+              <div class="tips-group">
+                <span class="tips" title="YOU CAN UPLOAD A PDF FILE">PDF</span>
+                <span class="tips" title="YOU CAN UPLOAD A MICROSOFT DOCUMENT"
+                  >DOCX</span
+                >
+                <span class="tips" title="YOU CAN UPLOAD A TEXT FILE">TXT</span>
+                <span class="tips" title="NOT MORE THAN 10 MEGABYTES"
+                  >&lt; 10MB</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- Submit Container -->
+          <section class="submit-container">
+            <p>
+              By creating an account you agree to the Terms of use and Privacy
+              Policy.
+            </p>
+            <button type="submit">Create an account</button>
+          </section>
+        </form>
+      </section>
+
+      <!-- Social Media Login -->
       <section class="nav-container">
         <div class="divider">OR</div>
         <nav>
@@ -81,6 +213,6 @@
           </a>
         </nav>
       </section>
-    </form>
+    </main>
   </body>
 </html>
