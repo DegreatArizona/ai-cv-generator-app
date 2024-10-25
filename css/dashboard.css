@@ -297,8 +297,8 @@ body {
   }
   .head-boot2 .row .col-lg-auto{
     display: flex;
-    justify-content: space-around;
-    flex-direction: colunm;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
 }
