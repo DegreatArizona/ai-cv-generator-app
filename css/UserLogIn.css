@@ -200,7 +200,10 @@ label {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.25rem; 
+        font-size: 1.25rem;
+    }
+    .password-container {
+        justify-content: flex-end;
     }
 
     .input-control button {
