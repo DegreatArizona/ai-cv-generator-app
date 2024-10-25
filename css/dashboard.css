@@ -295,10 +295,11 @@ body {
     line-height: 24px;
     border-radius: 5px;
   }
-  .head-boot2 {
+  .head-boot2 .row{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: colunm;
+    align-items: center;
   }
 }
 @media (min-width: 769px) /*PC*/ {
