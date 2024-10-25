@@ -169,6 +169,7 @@ body {
   box-shadow: -25px 162px 46px 0px rgba(0, 0, 0, 0),
     -4px 3px 26px 0px rgba(0, 0, 0, 0.09);
   padding: 7px 0px;
+  margin-top: 30x;
 }
 .status{
     color: rgba(67, 160, 71, 0.90);
