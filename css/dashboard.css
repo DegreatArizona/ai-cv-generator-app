@@ -227,7 +227,7 @@ body {
 .table-head{
     display: flex;
     height: 72px;
-    padding: 0px 32px;
+    gap: 30px;
     justify-content: space-between;
     align-items: center;
 }
