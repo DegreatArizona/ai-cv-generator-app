@@ -8,10 +8,14 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/testimonials/testimonial-3/assets/css/testimonial-3.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
         <!-- Bootstrap CSS v5.2.1 -->
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,7 +26,6 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/responsive.min.css">
     </head>
 
     <body>
@@ -61,8 +64,8 @@
                                 <a class="nav-link" href="#">Request Assistant</a>
                             </li>
                         </ul>
-                        <a class="btn" href="#" role="button">Login</a>
-                        <a class="btn btn-outline-primary" href="#" role="button">Sign Up</a>
+                        <a class="btn" href="LogIn.html" role="button">Login</a>
+                        <a class="btn btn-outline-primary" href="UserSignUp.html" role="button">Sign Up</a>
                     </div>
                 </div>
             </nav>
@@ -96,7 +99,7 @@
                     <div class="container">
                         <div class="row justify-content-center align-items-center g-2">
                             <div class="col-md col-lg">
-                              <div class="card how-card" style="width:18rem;">
+                              <div class="card how-card">
                                 <img src="image/mobile-angled.svg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Request Assistance</h5>
@@ -105,7 +108,7 @@
                              </div>
                         </div>
                             <div class="col-md col-lg">
-                              <div class="card how-card" style="width:18rem;">
+                              <div class="card how-card" >
                                 <img src="image/tow-truck.svg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Get Help</h5>
@@ -114,7 +117,7 @@
                              </div>
                         </div>
                             <div class="col-md col-lg">
-                              <div class="card how-card" style="width:18rem;">
+                              <div class="card how-card">
                                 <img src="image/thumbs-up.svg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Rate Our Service</h5>
@@ -139,7 +142,7 @@
                 <div class="container">
                     <div class="row justify-content-center align-items-center g-2">
                         <div class="col-md col-lg">
-                          <div class="card feature-card" style="width:18rem;">
+                          <div class="card feature-card">
                             <img src="image/instante.png" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Instant Service Matching</h5>
@@ -148,7 +151,7 @@
                          </div>
                     </div>
                         <div class="col-md col-lg">
-                          <div class="card feature-card" style="width:18rem;">
+                          <div class="card feature-card">
                             <img src="image/tracking.png" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Real-Time Tracking</h5>
@@ -157,7 +160,7 @@
                          </div>
                     </div>
                         <div class="col-md col-lg">
-                          <div class="card feature-card" style="width:18rem;">
+                          <div class="card feature-card">
                             <img src="image/service.png" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Multi-Service Options</h5>
@@ -169,6 +172,94 @@
                 </div>
             </div>
 
+            
+            <div class="plan">
+              <div class="plan-head">
+                <h2>Choose Your Plan</h2>
+                <p>Whether you’re a driver in need of quick help or a mechanic looking for new opportunities, we’ve got a plan that fits your needs. Select a plan and get started.</p>
+              </div>
+              <div class="slide-container swiper plan-body">
+              <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                  <div class="card swiper-slide">
+                    <div class="card-title">
+                      <h2>Free</h2>
+                      <p>For Drivers</p>
+                    </div>
+                    <div class="card-body">
+                      <span>₦0</span><span>/month</span>
+                    </div>
+                    <div class="card-content">
+                      <h2 class="name">What you get:</h2>
+                      <ul class="description">
+                        <li>Access to nearby Mechanics.</li>
+                        <li>Real-Time tracking for one breakdown request per month.</li>
+                        <li>Unlimited service options (eg. tire change, fuel delivery)</li>
+                      </ul>
+                      <button class="button">Get Started</button>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <div class="card-title">
+                      <h2>Basic</h2>
+                      <p>For Drivers</p>
+                    </div>
+                    <div class="card-body">
+                      <span>₦8,000</span><span>/month</span>
+                    </div>
+                    <div class="card-content">
+                      <h2 class="name">What you get:</h2>
+                      <ul class="description">
+                        <li>Unlimited access to mechanics.</li>
+                        <li>Real-time tracking for unlimited breakdown requests.</li>
+                        <li>Full service options (e.g., towing, diagnostics)</li>
+                      </ul>
+                      <button class="button">Get Started</button>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <div class="card-title">
+                      <h2>Pro</h2>
+                      <p>For Mechanics</p>
+                    </div>
+                    <div class="card-body">
+                      <span>₦16,000</span><span>/month</span>
+                    </div>
+                    <div class="card-content">
+                      <h2 class="name">What you get:</h2>
+                      <ul class="description">
+                        <li>Access to drivers in your area</li>
+                        <li>Customer ratings and reviews</li>
+                        <li>Priority matching for breakdown requests</li>
+                      </ul>
+                      <button class="button">Get Started</button>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <div class="card-title">
+                      <h2>Premium</h2>
+                      <p>For drivers</p>
+                    </div>
+                    <div class="card-body">
+                      <span>₦20,000</span><span>/month</span>
+                    </div>
+                    <div class="card-content">
+                      <h2 class="name">All Pro Plan Features, Plus:</h2>
+                      <ul class="description">
+                        <li>Featured listing for your mechanic services</li>
+                        <li>Advanced analytics and reporting</li>
+                        <li>Priority access to high-value breakdowns</li>
+                      </ul>
+                      <button class="button">Get Started</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next swiper-navBtn"></div>
+              <div class="swiper-button-prev swiper-navBtn"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+            </div>
            
             <div class="test-section">
                 <div class="test-head">
@@ -189,9 +280,9 @@
                             <img class="img-fluid rounded rounded-circle mb-4 border border-5" loading="lazy" src="./assets/img/testimonial-img-1.jpg" alt="Luna John">
                             <figcaption>
                               <div class="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
-                              <blockquote class="bsb-blockquote-icon mb-4">We were so impressed with the work they did for us. They were able to take our vision and turn it into a reality, and they did it all on time and within budget. We would highly recommend them to anyone looking for a reliable partner.</blockquote>
-                              <h4 class="mb-2">Luna John</h4>
-                              <h5 class="fs-6 text-secondary mb-0">UX Designer</h5>
+                              <blockquote class="bsb-blockquote-icon mb-4">This platform has helped me find more customers and grow my business. It’s so easy to use.</blockquote>
+                              <h4 class="mb-2">Michael Nwanze</h4>
+                              <h5 class="fs-6 text-secondary mb-0">Mechanic</h5>
                             </figcaption>
                           </figure>
                         </div>
@@ -204,9 +295,9 @@
                             <img class="img-fluid rounded rounded-circle mb-4 border border-5" loading="lazy" src="./assets/img/testimonial-img-4.jpg" alt="Luke Reeves">
                             <figcaption>
                               <div class="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
-                              <blockquote class="bsb-blockquote-icon mb-4">We were looking for a company that could help us with our branding. We needed a website and marketing materials. They were able to create a brand identity that we loved. They worked with us to develop a logo that represented our company.</blockquote>
-                              <h4 class="mb-2">Luke Reeves</h4>
-                              <h5 class="fs-6 text-secondary mb-0">Sales Manager</h5>
+                              <blockquote class="bsb-blockquote-icon mb-4">I was stranded on the highway but within minutes, I was connected to a mechanic nearby. This platform was a lifesaver! Highly recommend.</blockquote>
+                              <h4 class="mb-2">Gift Odunsi</h4>
+                              <h5 class="fs-6 text-secondary mb-0">Driver</h5>
                             </figcaption>
                           </figure>
                         </div>
@@ -219,9 +310,8 @@
                             <img class="img-fluid rounded rounded-circle mb-4 border border-5" loading="lazy" src="./assets/img/testimonial-img-2.jpg" alt="Mark Smith">
                             <figcaption>
                               <div class="bsb-ratings text-warning mb-3" data-bsb-star="4" data-bsb-star-off="1"></div>
-                              <blockquote class="bsb-blockquote-icon mb-4">We were looking for a company that could help us develop a new website that was both visually appealing and user-friendly. We are so happy with the results, and we would highly recommend them to anyone looking for a new website.</blockquote>
-                              <h4 class="mb-2">Mark Smith</h4>
-                              <h5 class="fs-6 text-secondary mb-0">Marketing Specialist</h5>
+                              <blockquote class="bsb-blockquote-icon mb-4">I ran out of fuel on a remote road, within 15 minutes, help was on the way. The whole process was smooth and stress-free.</blockquote><h4 class="mb-2">Segun Olabayo</h4>
+                              <h5 class="fs-6 text-secondary mb-0">Driver</h5>
                             </figcaption>
                           </figure>
                         </div>
@@ -240,120 +330,149 @@
                   </button>
                 </div>
               </div>
-
-
-
-              <div class=" content-space-2 content-space-b-lg-3 faq" style="margin-top: 40px;">
-                <div class="w-lg-75 mx-lg-auto container">
-                  <div class="d-grid gap-10">
-          
-          
-                    <div class="d-grid gap-3">
-                      <h2 class="text-center">Frequently Asked Questions </h2>
-          
-          <!-- Accordion -->
-          <div class="accordion accordion-flush accordion-lg" id="accordionFAQBasics">
-            <!-- Accordion Item -->
-            <div class="accordion-item">
-              <div class="accordion-header" id="headingBasicsOne">
-                <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsOne" aria-expanded="false" aria-controls="collapseBasicsOne">
-                <span class="num">01</span> What is Embold Design?
-                </a>
-              </div>
-              <div id="collapseBasicsOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQBasics">
-                <div class="accordion-body">
-                  Embold Design is a pioneering tech company committed to delivering practical solutions and innovative strategies.
+              
+              <div class="faq">
+                <div class="faq-head">
+                  <h2>Frequently Asked Questions</h2>
+                  <p>Have questions about how our platform works? Here are some of the most frequently asked questions.</p>
                 </div>
-              </div>
-            </div>
-            <!-- End Accordion Item -->
-          
-            <!-- Accordion Item -->
-            <div class="accordion-item">
-              <div class="accordion-header" id="headingBasicsTwo">
-                <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsTwo" aria-expanded="false" aria-controls="collapseBasicsTwo">
-                <span class="num">02</span> What services does Embold Design offer?
-                </a>
-              </div>
-              <div id="collapseBasicsTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQBasics">
-                <div class="accordion-body">
-                  We offer a variety of services including business consultation, financial projections, business analysis, business design and development, and bootcamp training.
-                </div>
-              </div>
-            </div>
-            <!-- End Accordion Item -->
-          
-            <!-- Accordion Item -->
-            <div class="accordion-item">
-              <div class="accordion-header" id="headingBasicsThree">
-                <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsThree" aria-expanded="false" aria-controls="collapseBasicsThree">
-                <span class="num">03</span>  What are the bootcamps offered by Embold Design?
-                </a>
-              </div>
-              <div id="collapseBasicsThree" class="accordion-collapse collapse" aria-labelledby="headingBasicsThree" data-bs-parent="#accordionFAQBasics">
-                <div class="accordion-body">
-                  We offer bootcamps in Product Design, Web Design/Development, Content Creation/Digital Marketing, Data Analytics, Graphics Design, Product Management, and Project Management.
-                </div>
-              </div>
-            </div>
-            <!-- End Accordion Item -->
-          
-            <!-- Accordion Item -->
-            <div class="accordion-item">
-              <div class="accordion-header" id="headingBasicsFour">
-                <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsFour" aria-expanded="false" aria-controls="collapseBasicsFour">
-                <span class="num">04</span> Who can attend the bootcamps?
-                </a>
-              </div>
-              <div id="collapseBasicsFour" class="accordion-collapse collapse" aria-labelledby="headingBasicsFour" data-bs-parent="#accordionFAQBasics">
-                <div class="accordion-body">
-                  Our bootcamps are open to anyone interested in enhancing their skills whether you are a beginner looking to enter the field or a professional seeking to update your skills.
-                </div>
-              </div>
-            </div>
-            <!-- End Accordion Item -->
-          
-            <!-- Accordion Item -->
-            <div class="accordion-item">
-              <div class="accordion-header" id="headingBasicsFive">
-                <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsFive" aria-expanded="false" aria-controls="collapseBasicsFive">
-                <span class="num">05</span>  What can I expect to learn from the Bootcamp?
-                </a>
-              </div>
-              <div id="collapseBasicsFive" class="accordion-collapse collapse" aria-labelledby="headingBasicsFive" data-bs-parent="#accordionFAQBasics">
-                <div class="accordion-body">
-                  These bootcamps are designed to provide practical, hands-on training and are suitable for both beginners and advanced learners. You will also work on real-world projects to build a portfolio.
-                </div>
-              </div>
-            </div>
-            <!-- End Accordion Item -->
-          
-            <!-- Accordion Item -->
-            <div class="accordion-item">
-              <div class="accordion-header" id="headingBasicsSix">
-                <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsSix" aria-expanded="false" aria-controls="collapseBasicsSix">
-                <span class="num">06</span>  How long do the bootcamps last?
-                </a>
-              </div>
-              <div id="collapseBasicsSix" class="accordion-collapse collapse" aria-labelledby="headingBasicsSix" data-bs-parent="#accordionFAQBasics">
-                <div class="accordion-body">
-                  Our bootcamp lasts for 2 months.
-                </div>
-              </div>
-            </div>
-            <!-- End Accordion Item -->
-          </div>
-          <!-- End Accordion -->
-          
-                    </div>
-          
-                   </div>
+                <div class="faq-body">
+                  <div class="accordion" id="sleekAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    How can I find a mechanic near me?
+                                                </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#sleekAccordion">
+                                            <div class="accordion-body">
+                                                After signing up, simply input your location or use the GPS feature to allow the platform to automatically find available mechanics close to you. You’ll get a list of options along with their reviews, ratings, and estimated arrival times.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    What services can I request through the platform?
+                                                </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#sleekAccordion">
+                                            <div class="accordion-body">
+                                                The platform offers a variety of services, including towing, tire changes, battery jumpstarts, fuel delivery, and more. Depending on the mechanic’s expertise, you can also request more complex services like diagnostics or engine repairs.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Is there a fee to use the platform?
+                                                </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#sleekAccordion">
+                                            <div class="accordion-body">
+                                                 For drivers, there is a free plan with limited features, while premium services like unlimited requests or real-time tracking are available for a small fee. Mechanics can choose from different subscription plans, starting with a basic plan and moving up to premium options with added perks.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                    How can I sign up as a mechanic?
+                                                </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#sleekAccordion">
+                                            <div class="accordion-body">
+                                                Mechanics can sign up by selecting the “Join as a Mechanic” option, filling out the required details, and submitting necessary certifications. Once approved, you’ll start receiving service requests from drivers in your area.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                    Is my personal information secure?
+                                                </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#sleekAccordion">
+                                            <div class="accordion-body">
+                                                Yes, we take your privacy seriously. All personal information is securely stored and protected, and we use advanced encryption to ensure that your data is safe when communicating through the platform.
+                                            </div>
+                                        </div>
+                                    </div>
                   </div>
                 </div>
+              </div>
+              
         </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
+        <footer class="footer mt-auto">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Description -->
+        <div class="col-md-4">
+          <h5>Logo</h5>
+          <p>Our platform connects drivers with nearby mechanics in real time, offering quick and reliable roadside assistance anytime, anywhere.</p>
+          <div class="social-icons">
+  <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-md-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">How it Works</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing Plans</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+        
+        <!-- Support Links -->
+        <div class="col-md-2">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="col-md-4">
+          <h5>Newsletter</h5>
+          <p>Subscribe to our newsletter and unlock a world of exclusive benefits. Be the first to know about our special promotions, and exciting updates.</p>
+          <form class="d-flex">
+            <input type="email" class="form-control newsletter-input" placeholder="Enter your email">
+            <button class="btn btn-primary ms-2" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <p class="mb-0">© 2023 All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -366,5 +485,7 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <script src="js/index.js"></script>
     </body>
 </html>
