@@ -392,3 +392,43 @@ body{
 .social-icons a:hover {
   color: #0A74DA; 
 }
+
+
+
+@media (max-width: 768px) /*Mobile*/ {
+    .hero-sub-section{
+        padding: 0;
+    }
+    .hero-sub-section img{
+        height: 400px;
+        width: 100%;
+    }
+    .how-body .row .how-card{
+        width: 100%;
+    }
+    .feature-body .row .feature-card{
+        width: 100%;
+    }
+    .slide-content{
+        margin: 0 10px;
+    }
+}
+@media (min-width: 769px) /*PC*/ {
+    .hero-head{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-top: 80px;
+    }
+    .hero-sub-section img{
+        height: 550px;
+        width: 100%;
+    }
+    .hero-sub-section{
+        width: 400px;
+    }
+    .hero-section{
+        padding: 50px;
+    }
+}
