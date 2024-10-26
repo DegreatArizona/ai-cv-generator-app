@@ -1,8 +1,8 @@
 const modal = document.getElementById("invoiceModal");
-const btn = document.getElementById("openInvoiceBtn");
+//const btn = document.getElementById("openInvoiceBtn");
 const span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
+function openInvoiceBtn() {
     modal.style.display = "block";
 }
 
