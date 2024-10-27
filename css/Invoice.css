@@ -107,7 +107,7 @@ body {
 .proceed {
     display: flex;
     flex-direction: column; /* Ensure buttons stack vertically */
-    justify-content: flex-end; /* Align buttons to the bottom */
+    justify-content: center; /* Align buttons to the bottom */
     gap: 10px; 
     margin: 10px 20px;
 }
