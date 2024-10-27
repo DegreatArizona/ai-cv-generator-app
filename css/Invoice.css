@@ -1,4 +1,3 @@
-/*General*/
 :root {
     --blue: rgba(10, 116, 218, 0.90);
     --dark: rgba(33, 33, 33, 0.80);
@@ -11,6 +10,7 @@ body {
     line-height: 1.3;
     color: darkgray;
 }
+
 .modal {
     display: none; 
     position: fixed; 
@@ -28,52 +28,70 @@ body {
     margin: 15% auto; 
     padding: 0; 
     border: 1px solid #333232;
-    width: 80%; 
+    width: 100%; 
     max-width: 500px; 
     border-radius: 8px;
 }
-/* Purchase Information */
+
+.puch-info #invoice {
+    color: var(--blue);
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
 .puch-info-gen-container {
-    background-color:#0A74DA1A;
-    color:(--dark);
-    width: 80%px;
-    height: 178px;
+    background-color: #0A74DA1A;
+    color: var(--dark);
+    width: 94%; 
+    height: auto; 
     border-bottom-left-radius: 21px;
     border-bottom-right-radius: 21px;
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
+
+.puch-info-container-1,
+.puch-info-container-2 {
+    width: 50%; 
+    margin-top: 10px;
+}
+
 .puch-info-container-1 {
-    float: left;
-    width: 50%;
-    margin-top: 10px;
+    text-align: left; 
 }
-.puch-info-container-2{
-    float: right;
-    width: 50%;
-    margin-top: 10px;
-    text-align: right;
+
+.puch-info-container-2 {
+    text-align: right; 
 }
+
 .puch-info {
     margin: 10px 0;
 }
-.puch-info p{
+
+.puch-info p {
     margin-bottom: 0;
     margin-top: 0;
 }
-.puch-info #name, .puch-info #issued-date, .puch-info #due-date, .puch-info #invoice-no, .puch-info #address, .puch-info #due-date, .puch-info #invoice {
-    font: bold; 
+
+.puch-info #name, 
+.puch-info #issued-date, 
+.puch-info #due-date, 
+.puch-info #invoice-no, 
+.puch-info #address, 
+.puch-info #due-date {
+    font-weight: bold; 
     color: var(--dark);
 }
-/* Descriptions */
+
 .description {
     width: 90%;
-    height: 110px;
+    height: auto; 
     display: flex;
     flex-direction: row;
     padding: 10px;
-    margin: 20px auto;
+    margin: 10px auto;
     color: var(--dark);
 }
 
@@ -81,33 +99,75 @@ body {
     margin-bottom: 10px;
     margin-left: 11px;
 }
-.description div #service{
-    max-width: 60%;
-    margin-left: 0px;
+
+.description div h3 {
+    margin-bottom: 20px;
 }
-/* Button */
+
 .proceed {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 10px; 
     margin: 10px 20px;
 }
+
 button {
     padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
-    border:solid#0056b3;
+    border: solid var(--blue); 
     border-radius: 5px;
 }
+
 .proceed #makePaymentBtn {
-    color: white;
-    background-color: var(--blue);
-}
-.proceed .close{
     color: var(--blue);
-    background-color:white;
+    background-color: white;
 }
-.proceed .close:hover, .proceed #makePaymentBtn {
-    background-color: #0056b3;
+
+.proceed .close {
+    color: var(--blue);
+    background-color: white;
+}
+
+.proceed .close:hover, 
+.proceed #makePaymentBtn:hover {
+    background-color: var(--blue);
     color: white;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; 
+    }
+
+    .puch-info-gen-container {
+        padding: 15px; 
+    }
+
+    .puch-info-container-1,
+    .puch-info-container-2 {
+        width: 50%; 
+    }
+
+    body {
+        font-size: 0.65rem; 
+    }
+
+    .description {
+        font-size: 0.65rem; 
+    }
+
+    button {
+        font-size: 12px; 
+    }
+
+    .proceed {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    button {
+        width: 80%; 
+        margin-bottom: 10px; 
+    }
 }
