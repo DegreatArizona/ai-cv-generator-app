@@ -135,7 +135,7 @@ button {
     color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .modal-content {
         width: 90%; 
     }
