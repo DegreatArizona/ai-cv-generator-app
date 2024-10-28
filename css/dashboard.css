@@ -4,6 +4,12 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+@media (max-width: 1400px) {
+  .container {
+    max-width: 95% !important;
+  }
+}
+
 .head-nav {
   display: flex;
   height: 72px;
@@ -11,16 +17,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.head-nav .navbar-brand {
-  color: var(--Text-color-T100, #212121);
-  text-align: center;
-  font-family: "Montserrat";
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -0.16px;
+
+/* header */
+.head-nav .brand img {
+  width: 120px;
 }
+
 .head-icon {
   display: flex;
   align-items: center;
@@ -147,7 +149,7 @@ body {
   font-size: 17.671px;
   font-style: normal;
   font-weight: 700;
-  line-height: 25.524px; 
+  line-height: 25.524px;
 }
 .head-boot2 .f {
   color: rgba(33, 33, 33, 0.9);
@@ -156,7 +158,7 @@ body {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px; 
+  line-height: 28px;
   opacity: 0.5;
 }
 .head-boot2 img {
@@ -170,113 +172,123 @@ body {
     -4px 3px 26px 0px rgba(0, 0, 0, 0.09);
   padding: 7px 0px;
 }
-.status{
-    color: rgba(67, 160, 71, 0.90);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    border-radius: 10.55px;
-    background: rgba(67, 160, 71, 0.20);
-    padding: 4px;
-    margin-bottom: 30px;
-    width: 40%;
-    text-align: center;
+.status {
+  color: rgba(67, 160, 71, 0.9);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  border-radius: 10.55px;
+  background: rgba(67, 160, 71, 0.2);
+  padding: 4px;
+  margin-bottom: 30px;
+  width: 40%;
+  text-align: center;
 }
-.progress-status{
-    gap: 19.634px;
+.progress-status {
+  gap: 19.634px;
 }
-.progress-bar-status .progress{
-    gap: 19.634px;
-    margin-bottom: 15px;
+.progress-bar-status .progress {
+  gap: 19.634px;
+  margin-bottom: 15px;
 }
-.feed{
-    margin-top: 30px;
+.feed {
+  margin-top: 30px;
 }
-.table{
-    border-radius: 14px;
-    border: 1px solid #E0E0E0;
+.table {
+  border-radius: 14px;
+  border: 1px solid #e0e0e0;
 }
-.table-success-status{
-    color: rgba(67, 160, 71, 0.90);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    border-radius: 10.55px;
-    background: rgba(67, 160, 71, 0.20);
-    padding: 4px;
+.table-success-status {
+  color: rgba(67, 160, 71, 0.9);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  border-radius: 10.55px;
+  background: rgba(67, 160, 71, 0.2);
+  padding: 4px;
 }
-.table-danger-status{
-    color: rgba(160, 67, 67, 0.9);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    border-radius: 10.55px;
-    background: rgba(160, 67, 67, 0.2);
-    padding: 4px;
+.table-danger-status {
+  color: rgba(160, 67, 67, 0.9);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  border-radius: 10.55px;
+  background: rgba(160, 67, 67, 0.2);
+  padding: 4px;
 }
-.table-head .filter{
-    box-shadow: -25px 162px 46px 0px rgba(0, 0, 0, 0),
+.table-head .filter {
+  box-shadow: -25px 162px 46px 0px rgba(0, 0, 0, 0),
     -4px 3px 26px 0px rgba(0, 0, 0, 0.09);
-    border-radius: 5px;
-    padding: 5px;
+  border-radius: 5px;
+  padding: 5px;
 }
-.table-head{
-    display: flex;
-    height: 72px;
-    gap: 30px;
-    justify-content: space-between;
-    align-items: center;
+.table-head {
+  display: flex;
+  height: 72px;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
 }
-.notify .notify-head{
-    color: #212121;
-    font-size:30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-    padding: 13px;
-    border-bottom: 1px solid black;
+.notify .notify-head {
+  color: #212121;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 13px;
+  border-bottom: 1px solid black;
 }
-.notify-content span{
-    color: rgba(33, 33, 33, 0.40);
-    font-family: 'Montserrat';
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px; /* 160% */
-    letter-spacing: 0.04px;
+.notify-content span {
+  color: rgba(33, 33, 33, 0.4);
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 160% */
+  letter-spacing: 0.04px;
 }
-.notify-content p{
-    color: #212121;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 19px; 
-    letter-spacing: 0.04px;
+.notify-content p {
+  color: #212121;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.04px;
 }
-.notify-content img{
-    display: flex;
-    padding: 3px;
-    width: 45px;
-    height: 45px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    background: rgba(10, 116, 218, 0.30);
+.notify-content img {
+  display: flex;
+  padding: 3px;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: rgba(10, 116, 218, 0.3);
 }
-.notify-content{
-    display: flex;
-    padding: 11px;
-    align-items: center;
-    align-content: center;
-    gap: -8px;
-    align-self: stretch;
-    flex-wrap: wrap;
-    margin-top: 10px;
+.notify-content {
+  display: flex;
+  padding: 11px;
+  align-items: center;
+  align-content: center;
+  gap: -8px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
-.notify{
-    background: #FFF;
-    box-shadow: -25px 162px 46px 0px rgba(0, 0, 0, 0.00), -4px 3px 26px 0px rgba(0, 0, 0, 0.09);
-    border-radius: 6px;
+.notify {
+  background: #fff;
+  box-shadow: -25px 162px 46px 0px rgba(0, 0, 0, 0),
+    -4px 3px 26px 0px rgba(0, 0, 0, 0.09);
+  border-radius: 6px;
+}
+
+/* History Page Styles */
+.history {
+  max-width: 95%;
+  margin: auto;
+}
+.history tbody td {
+  vertical-align: middle;
 }
 
 /*Responsive*/
@@ -290,14 +302,15 @@ body {
     line-height: 24px;
     border-radius: 5px;
   }
-  .head-boot2 .row .col-md-6, .col-md-auto{
+  .head-boot2 .row .col-md-6,
+  .col-md-auto {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .head-boot2{
+  .head-boot2 {
     margin-top: 30px;
   }
 }
