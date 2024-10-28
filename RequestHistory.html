@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Request History</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet" />
+    <!-- CSS - dataTable styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <!-- scripts -->
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script
+      defer
+      src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script
+      defer
+      src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
+    <script defer src="js/datatable.js"></script>
+  </head>
+  <body>
+    <!-- Inherit header from dashboard -->
+    <header>
+      <div class="head-nav container">
+        <a class="brand" href="index.html">
+          <img src="image/logo.svg" alt="Auto aid logo" />
+        </a>
+        <div class="head-icon">
+          <a href="#" class="fa fa-cog" aria-hidden="true"></a>
+          <a href="#" class="fa fa-bell" aria-hidden="true"></a>
+          <img src="/image/user.png" alt="user" />
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-sm border">
+        <div class="container">
+          <a class="navbar-brand" href="#"></a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Request Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Notifications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link actives" aria-current="page" href="#"
+                  >Request History
+                  <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Invoice.html">Invoice</a>
+              </li>
+            </ul>
+            <div class="d-flex my-2 my-lg-0">
+              <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Search" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Inherit header from dashboard -->
+    <main class="history container">
+      <h2 class="my-4">Request History</h2>
+      <section class="table-responsive mt-4">
+        <table
+          id="historyTable"
+          class="table table-striped table-hover table-borderless border-0">
+          <thead>
+            <tr class="text-body-tertiary">
+              <th class="text-body-tertiary">Vehicle Information</th>
+              <th class="text-body-tertiary">Problem Description</th>
+              <th class="text-body-tertiary">Service Type</th>
+              <th class="text-body-tertiary">Request Date</th>
+              <th class="text-body-tertiary">Status</th>
+              <th class="text-body-tertiary">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody" class="bg-primary">
+            <!-- Mapping through the history data -->
+            <!-- first data row -->
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Flat tire on rear left side</td>
+              <td>Tire Change</td>
+              <td>
+                <span class="d-block">Oct 10, 2024</span>
+                <span class="d-block">3:30 PM</span>
+              </td>
+              <td>Completed</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Repeat
+                </a>
+              </td>
+            </tr>
+            <!-- second data row -->
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Battery Issue</td>
+              <td>Battery Jump</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <!-- third data row -->
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <!-- Add more rows as needed -->
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <td>
+                <span class="d-block">Toyota Camry 2019</span>
+                <span class="d-block">License No: AB123XY</span>
+              </td>
+              <td>Engine Overheating</td>
+              <td>Towing</td>
+              <td>
+                <span class="d-block">Oct 15, 2024</span>
+                <span class="d-block">11:00 AM</span>
+              </td>
+              <td>In Progress</td>
+              <td>
+                <a href="#" class="btn btn-outline-primary">
+                  View Details / Cancel
+                </a>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
