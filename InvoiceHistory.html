@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Invoice History</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet" />
+    <!-- CSS - dataTable styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <!-- scripts -->
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script
+      defer
+      src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script
+      defer
+      src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
+    <script defer src="js/datatable.js"></script>
+  </head>
+  <body>
+    <!-- Inherit header from dashboard -->
+    <header>
+      <div class="head-nav container">
+        <a class="brand" href="index.html">
+          <img src="image/logo.svg" alt="Auto aid logo" />
+        </a>
+        <div class="head-icon">
+          <a href="#" class="fa fa-cog" aria-hidden="true"></a>
+          <a href="#" class="fa fa-bell" aria-hidden="true"></a>
+          <img src="/image/user.png" alt="user" />
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-sm border">
+        <div class="container">
+          <a class="navbar-brand" href="#"></a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="RequestService.html"
+                  >Request Service</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notifications.html">Notifications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="RequestHistory.html"
+                  >Request History</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link actives" aria-current="page" href="#"
+                  >Invoices <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+            </ul>
+            <div class="d-flex my-2 my-lg-0">
+              <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Search" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Inherit header from dashboard -->
+    <main class="history container">
+      <h2 class="my-4">Invoice History</h2>
+      <section class="table-responsive mt-4">
+        <table
+          id="invoiceTable"
+          class="table table-hover table-borderless border-0">
+          <thead>
+            <tr>
+              <th class="text-body-tertiary">Invoice Date</th>
+              <th class="text-body-tertiary">Invoice Number</th>
+              <th class="text-body-tertiary">Service Type</th>
+              <th class="text-body-tertiary">Amount (&#x20A6;)</th>
+              <th class="text-body-tertiary">Status</th>
+              <th class="text-body-tertiary">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Mapping through the history data -->
+            <!-- first data row -->
+            <tr>
+              <td>Oct 20, 2024</td>
+              <td>#INV20241020</td>
+              <td>Towing Service</td>
+              <td>&#x20A6;80,000</td>
+              <td><span class="status table-success-status">Paid</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Download</a>
+              </td>
+            </tr>
+            <!-- second data row -->
+            <tr>
+              <td>Oct 22, 2024</td>
+              <td>#INV20241022</td>
+              <td>Engine Breakdown</td>
+              <td>&#x20A6;450,000</td>
+              <td><span class="status table-danger-status">Overdue</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Pay Now</a>
+              </td>
+            </tr>
+            <!-- third data row -->
+            <tr>
+              <td>Oct 23, 2024</td>
+              <td>#INV20241023</td>
+              <td>Tire Repair</td>
+              <td>&#x20A6;50,000</td>
+              <td><span class="status table-pending-status">Pending</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Pay Now</a>
+              </td>
+            </tr>
+            <!-- Add more rows as needed -->
+            <tr>
+              <td>Oct 24, 2024</td>
+              <td>#INV20241024</td>
+              <td>Over Heating</td>
+              <td>&#x20A6;120,000</td>
+              <td><span class="status table-success-status">Paid</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Download</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Oct 26, 2024</td>
+              <td>#INV20241026</td>
+              <td>Tire Repair</td>
+              <td>&#x20A6;50,000</td>
+              <td><span class="status table-pending-status">Pending</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Pay Now</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Oct 27, 2024</td>
+              <td>#INV20241027</td>
+              <td>Towing Service</td>
+              <td>&#x20A6;80,000</td>
+              <td><span class="status table-success-status">Paid</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Download</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Oct 29, 2024</td>
+              <td>#INV20241029</td>
+              <td>Engine Breakdown</td>
+              <td>&#x20A6;450,000</td>
+              <td><span class="status table-danger-status">Overdue</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Pay Now</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Oct 30, 2024</td>
+              <td>#INV20241030</td>
+              <td>Tire Repair</td>
+              <td>&#x20A6;50,000</td>
+              <td><span class="status table-pending-status">Pending</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Pay Now</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Oct 24, 2024</td>
+              <td>#INV20241024</td>
+              <td>Over Heating</td>
+              <td>&#x20A6;120,000</td>
+              <td><span class="status table-success-status">Paid</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Download</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Oct 26, 2024</td>
+              <td>#INV20241026</td>
+              <td>Tire Repair</td>
+              <td>&#x20A6;50,000</td>
+              <td><span class="status table-pending-status">Pending</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Pay Now</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Oct 27, 2024</td>
+              <td>#INV20241027</td>
+              <td>Towing Service</td>
+              <td>&#x20A6;80,000</td>
+              <td><span class="status table-success-status">Paid</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Download</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Oct 29, 2024</td>
+              <td>#INV20241029</td>
+              <td>Engine Breakdown</td>
+              <td>&#x20A6;450,000</td>
+              <td><span class="status table-danger-status">Overdue</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Pay Now</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Oct 30, 2024</td>
+              <td>#INV20241030</td>
+              <td>Tire Repair</td>
+              <td>&#x20A6;50,000</td>
+              <td><span class="status table-pending-status">Pending</span></td>
+              <td>
+                <a href="Invoice.html" class="btn btn-outline-primary">View</a>
+                <a href="#" class="btn btn-primary">Pay Now</a>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th class="text-body-tertiary">Invoice Date</th>
+              <th class="text-body-tertiary">Invoice Number</th>
+              <th class="text-body-tertiary">Service Type</th>
+              <th class="text-body-tertiary">Amount (&#x20A6;)</th>
+              <th class="text-body-tertiary">Status</th>
+              <th class="text-body-tertiary">Action</th>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
