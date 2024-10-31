@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Request Service</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/signup.css" />
+    <!-- scripts -->
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/dashboard.js"></script>
+  </head>
+  <body>
+    <!-- Inherit header from dashboard -->
+    <header>
+      <div class="head-nav container">
+        <a class="brand" href="index.html">
+          <img src="image/logo.svg" alt="Auto aid logo" />
+        </a>
+        <div class="head-icon">
+          <a href="#" class="fa fa-cog" aria-hidden="true"></a>
+          <a
+            href="notifications.html"
+            class="fa fa-bell"
+            aria-hidden="true"></a>
+          <img src="image/user.png" alt="user" />
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-sm border">
+        <div class="container">
+          <a class="navbar-brand" href="#"></a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link actives" aria-current="page" href="#"
+                  >Request Service
+                  <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notifications.html">Notifications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="RequestHistory.html"
+                  >Request History</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="InvoiceHistory.html">Invoices</a>
+              </li>
+            </ul>
+            <div class="d-flex my-2 my-lg-0">
+              <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Search" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="history container">
+      <h2 class="my-4">Request a Service</h2>
+      <form id="requestServiceForm" action="">
+        <h5 class="text-black-50">Vehicle Information</h5>
+        <section class="input-field-container">
+          <div class="input-field">
+            <label for="vehicle_model" class="input-label">Vehicle Model</label>
+            <input
+              type="text"
+              id="vehicle_model"
+              placeholder="e.g. Toyota Camry 2019"
+              required />
+          </div>
+          <div class="input-field">
+            <label for="license_number" class="input-label"
+              >License Number</label
+            >
+            <input
+              type="text"
+              id="license_number"
+              placeholder="e.g. ABC-123XY"
+              required />
+          </div>
+        </section>
+        <section class="input-field-container">
+          <div class="input-field">
+            <label for="vehicle_problem" class="input-label"
+              >Describe the Problem</label
+            >
+            <textarea
+              cols="30"
+              rows="4"
+              id="vehicle_problem"
+              placeholder="e.g. Flat tire on rear left side..."
+              required></textarea>
+          </div>
+          <div class="input-field">
+            <label for="service_type" class="input-label">Service Type</label>
+            <select id="service_type" class="input-field" required>
+              <option value="" disabled selected>
+                -- Choose Service Type --
+              </option>
+              <option value="flat_tire">Flat Tire</option>
+              <option value="broken_rear_mirror">Broken Rear Mirror</option>
+            </select>
+          </div>
+        </section>
+        <section class="location-container">
+          <label class="input-label">Location</label>
+          <button type="button" class="location-btn" id="automatic-address">
+            Use Current Location <i class="fa fa-location-dot"></i>
+          </button>
+          <button type="button" class="outline-btn" id="manual-address">
+            Enter Address Manually <i class="fa fa-pen"></i>
+          </button>
+          <div class="input-field input-field-container">
+            <input
+              id="location"
+              type="text"
+              placeholder="Enter your address here" />
+          </div>
+        </section>
+        <section class="submit-container">
+          <button type="submit" class="submit-btn">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
