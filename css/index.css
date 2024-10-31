@@ -432,10 +432,10 @@ h2{
   .hero-section {
     padding: 50px;
   }
-  p{
+  .hero-head p{
   font-size: 16px;
 }
-h2{
+hero-head h2{
   font-size: 30px;
 }
 }
