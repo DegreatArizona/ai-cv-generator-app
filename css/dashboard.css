@@ -1,3 +1,10 @@
+:root {
+  --blue: rgba(10, 116, 218, 0.9);
+  --dark: rgba(33, 33, 33, 0.8);
+  --text-clr: rgba(33, 33, 33, 1);
+  --link-clr: rgba(13, 71, 161, 1);
+  --dark-blue-clr: rgb(0, 0, 139);
+}
 body {
   margin: 0;
   padding: 0;
@@ -312,6 +319,86 @@ body {
 }
 #invoiceTable > :not(caption) > * > * {
   padding-block: 10px; /* to override padding from bootstrap */
+}
+
+/* Request Service Styles */
+#requestServiceForm label {
+  font-weight: 600;
+  color: rgb(138, 138, 138);
+}
+.input-field select,
+.input-field textarea {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--dark);
+}
+select {
+  cursor: pointer;
+}
+.location-container {
+  margin-top: 30px;
+}
+.location-container > label {
+  display: block;
+  margin-bottom: 4px;
+  cursor: auto;
+}
+.location-btn,
+.outline-btn,
+.submit-btn {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 6px;
+  font-weight: 600;
+  outline: none;
+  color: #fff;
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+}
+.outline-btn {
+  color: var(--blue);
+  background-color: transparent;
+}
+.submit-container button:hover,
+.location-container button:hover {
+  color: #fff;
+  border-color: var(--dark-blue-clr);
+  background-color: var(--dark-blue-clr);
+}
+#requestServiceForm .input-field input,
+#requestServiceForm .submit-container button {
+  border-radius: 6px;
+}
+#requestServiceForm .submit-container {
+  margin-top: 40px;
+}
+#requestServiceForm .submit-container button {
+  width: fit-content;
+  padding-inline: 30px;
+  margin-inline: auto;
+}
+.input-field-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+#manual-address {
+  margin-left: 10px;
+}
+#location {
+  display: none;
+}
+#location.active {
+  display: block;
+}
+@media (max-width: 700px) {
+  .input-field-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*Responsive*/
