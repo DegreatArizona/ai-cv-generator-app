@@ -145,12 +145,14 @@
         </section>
         <section class="location-container">
           <label class="input-label">Location</label>
+          <div class="location-button-container">
           <button type="button" class="location-btn" id="automatic-address">
             Use Current Location <i class="fa fa-location-dot"></i>
           </button>
           <button type="button" class="outline-btn" id="manual-address">
             Enter Address Manually <i class="fa fa-pen"></i>
           </button>
+          </div>
           <div class="input-field input-field-container">
             <input
               id="location"
@@ -161,6 +163,14 @@
         <section class="submit-container">
           <button type="submit" class="submit-btn">Submit</button>
         </section>
+      </form>
+    </main>
+    <section class="msg-box-container">
+      <span class="fa fa-xmark" role="button"></span>
+      <div class="msg-box" role="alertdialog">
+        <p class="msg"></p>
+      </div>
+    </section>
       </form>
     </main>
   </body>
