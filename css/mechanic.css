@@ -262,6 +262,10 @@ body {
   color: rgba(160, 67, 67, 0.9);
   background: rgba(160, 67, 67, 0.2);
 }
+.scroll-card {
+  height: 380px;
+  overflow-y: scroll;
+}
 
 /* Job History Page */
 .page-title {
