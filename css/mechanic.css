@@ -263,7 +263,7 @@ body {
   background: rgba(160, 67, 67, 0.2);
 }
 .scroll-card {
-  height: 380px;
+  height: 200px;
   overflow-y: scroll;
 }
 
