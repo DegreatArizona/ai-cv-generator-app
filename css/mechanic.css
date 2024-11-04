@@ -1,0 +1,177 @@
+
+/* Dialog Message Box */
+.msg-box-container {
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #888;
+  position: fixed;
+  top: -580px;
+  left: 20%;
+  right: 20%;
+  border: 1px solid transparent;
+}
+.msg-box-container.active {
+  top: 50px;
+}
+.msg-box-container.error {
+  border-color: rgba(160, 67, 67, 0.9);
+}
+.msg-box-container.warning {
+  border-color: rgba(160, 67, 67, 0.7);
+}
+.msg-box-container.success {
+  border-color: rgba(67, 160, 71, 0.9);
+}
+.msg-box-container.error .msg {
+  color: rgba(160, 67, 67, 0.9);
+}
+.msg-box-container.warning .msg {
+  color: rgba(160, 67, 67, 0.7);
+}
+.msg-box-container.success .msg {
+  color: rgba(67, 160, 71, 0.9);
+}
+.msg-box-container .fa-xmark {
+  display: block;
+  width: fit-content;
+  font-size: 1rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .msg-box-container {
+    left: 5%;
+    right: 5%;
+  }
+}
+
+/* Mechanis Dashboard  */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.body {
+  font-size: 0.875rem;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  /* Behind the navbar */
+  padding: 48px 0 0;
+  /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--text-clr);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin: 0.75rem;
+}
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  font-weight: 500;
+  background-color: rgba(0, 123, 255, 0.441);
+}
+.sidebar .nav-link img {
+  display: block;
+  width: 20px;
+}
+
+/* Navbar */
+.body .brand-logo {
+  flex-basis: 150px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.body .navbar .navbar-toggler {
+  top: 0.25rem;
+  right: 1rem;
+}
+.body .nav-menu-container {
+  top: 90px;
+}
+.main-content .stat-card {
+  border-radius: 25px;
+  color: rgba(0, 123, 255, 0.9);
+  border: 1px solid rgba(0, 123, 255, 0.9);
+}
+.main-content .stat-card h3,
+.main-content .stat-card h6 {
+  color: rgba(0, 123, 255, 0.9);
+}
+.main-content .stat-card h3 {
+  font-size: 2rem;
+}
+.main-content .stat-card h6 {
+  font-weight: 400;
+}
+.main-content .stat-card span {
+  display: block;
+  width: fit-content;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gap-10 {
+  gap: 10px;
+}
+.light-thead th {
+  font-size: 0.75rem;
+}
+.dashboard-card {
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: -25px 162px 46px 0px rgba(0, 0, 0, 0),
+    -4px 3px 26px 0px rgba(0, 0, 0, 0.09);
+  padding: 15px;
+  margin-block: 15px;
+}
+.dashboard-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: rgba(0, 123, 255, 0.9);
+}
+/* End of Mechanic dashboard styles */
