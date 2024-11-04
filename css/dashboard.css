@@ -358,6 +358,53 @@ select {
   }
 }
 
+/* Dialog Message Box */
+.msg-box-container {
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #888;
+  position: fixed;
+  top: -580px;
+  left: 20%;
+  right: 20%;
+  border: 1px solid transparent;
+}
+.msg-box-container.active {
+  top: 50px;
+}
+.msg-box-container.error {
+  border-color: rgba(160, 67, 67, 0.9);
+}
+.msg-box-container.warning {
+  border-color: rgba(160, 67, 67, 0.7);
+}
+.msg-box-container.success {
+  border-color: rgba(67, 160, 71, 0.9);
+}
+.msg-box-container.error .msg {
+  color: rgba(160, 67, 67, 0.9);
+}
+.msg-box-container.warning .msg {
+  color: rgba(160, 67, 67, 0.7);
+}
+.msg-box-container.success .msg {
+  color: rgba(67, 160, 71, 0.9);
+}
+.msg-box-container .fa-xmark {
+  display: block;
+  width: fit-content;
+  font-size: 1rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .msg-box-container {
+    left: 5%;
+    right: 5%;
+  }
+}
+
 /*Responsive*/
 @media (max-width: 768px) /*Mobile*/ {
   .navbar-nav .nav-item:hover {
