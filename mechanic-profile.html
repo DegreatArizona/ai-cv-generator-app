@@ -30,6 +30,62 @@
       rel="canonical"
       href="https://v5.getbootstrap.com/docs/5.0/examples/dashboard/" />
     <link rel="stylesheet" href="css/mechanic.css" />
+    <style>  
+      body {  
+          font-family: Arial, sans-serif;  
+          background-color: #f8f9fa;  
+      }   
+      .sidebar a:hover {  
+          background-color: #e1e1e1;  
+      }  
+      .main-content {  
+          padding: 10px;  
+          overflow-x: auto;  
+      }  
+      .earnings-card {  
+          flex: 1 1 150px;  
+          margin: 5px;  
+          text-align: center;  
+      }  
+      .mt-4, h1 {  
+          text-align: left;  
+          color: #1a73e8;  
+      }  
+      .card-body{  
+        color: #1a73e8;  
+      }  
+      .chart-container, .table-responsive {  
+          width: 100%;  
+          min-width: 100%;  
+          margin: 10px auto;  
+          background-color: white;  
+          border-radius: 5px;  
+      }  
+      #earningsChart {  
+          min-height: 400px; /* Increased max height for the chart */  
+      }   
+      .detailed-earning-h{  
+        background-color: white;  
+        padding: 10px;  
+        border-radius: 5px;  
+      }  
+      @media (min-width: 576px) {  
+          .chart-container, .table-responsive {  
+              max-width: 300px;  
+          }  
+      }  
+      @media (max-width: 576px) {  
+          .earnings-card h5, .earnings-card h3 {  
+              font-size: 0.9rem;  
+          }  
+          .earnings-card {  
+              flex: 1 1 120px;  
+          }  
+          .chart-container, .table-responsive {  
+              max-width: 120px;  
+          }  
+      }  
+    </style> 
   </head>
 
   <body class="body">
@@ -115,21 +171,118 @@
           <!-- head -->
           <section class="head">
             <!-- first row -->
-            <article class="container">
-              <div>
-                <h2 class="page-title mt-3">Profile</h2>
-                <p class="">
-                  Manage your personal information, preferences, and
-                  availability.
-                </p>
-              </div>
-            </article>
-          </section>
-          <section>
-            <!-- section for the form -->
-          </section>
+            <div class="main-content col">  
+              <h1>Earnings</h1>  
+              <div class="d-flex overflow-auto">  
+                  <div class="card earnings-card">  
+                      <div class="card-body">  
+                          <h5>Total Earnings</h5>  
+                          <h3>₦500,000</h3>  
+                      </div>  
+                  </div>  
+                  <div class="card earnings-card">  
+                      <div class="card-body">  
+                          <h5>This Month</h5>  
+                          <h3>₦50,000</h3>  
+                      </div>  
+                  </div>  
+                  <div class="card earnings-card">  
+                      <div class="card-body">  
+                          <h5>Pending Payments</h5>  
+                          <h3>₦15,000</h3>  
+                      </div>  
+                  </div>  
+              </div>  
+  
+              <div class="chart-container">  
+                  <canvas id="earningsChart" width="150" height="100"></canvas>  
+              </div>  
+              <div class="detailed-earning-h">
+                <h3 class="mt-4">Detailed Earnings</h3> 
+              </div> 
+              <div class="table-responsive">  
+                  <table class="table">  
+                      <thead>  
+                          <tr>  
+                              <th>Job ID</th>  
+                              <th>Date</th>  
+                              <th>Service Type</th>  
+                              <th>Amount Earned</th>  
+                              <th>Payment Status</th>  
+                          </tr>  
+                      </thead>  
+                      <tbody>  
+                          <tr>  
+                              <td>0897</td>  
+                              <td>Oct 15, 2024</td>  
+                              <td>Towing</td>  
+                              <td>₦10,000</td>  
+                              <td><span class="badge bg-success">Paid</span></td>  
+                          </tr>  
+                          <tr>  
+                              <td>0897</td>  
+                              <td>Oct 15, 2024</td>  
+                              <td>Oil Change</td>  
+                              <td>₦15,000</td>  
+                              <td><span class="badge bg-warning">Pending</span></td>  
+                          </tr>  
+                          <tr>  
+                              <td>0898</td>  
+                              <td>Oct 16, 2024</td>  
+                              <td>Tire Change</td>  
+                              <td>₦20,000</td>  
+                              <td><span class="badge bg-success">Paid</span></td>  
+                          </tr>  
+                      </tbody>  
+                  </table>  
+              </div>  
+          </div>  
+        </section>
+         
         </main>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+    <script>  
+        const ctx = document.getElementById('earningsChart').getContext('2d');  
+        const earningsChart = new Chart(ctx, {  
+            type: 'bar',  
+            data: {  
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October'],  
+                datasets: [{  
+                    label: '',  
+                    data: [20000, 15000, 30000, 25000, 40000, 45000, 30000, 50000, 60000, 55000],  
+                    backgroundColor: '#1a73e8',  
+                    borderColor: '#1a73e8',  
+                    borderWidth: 1,  
+                    barThickness: 15  
+                }]  
+            },  
+            options: {  
+                responsive: true,  
+                maintainAspectRatio: false,  
+                plugins: {  
+                    legend: {  
+                        display: false  
+                    }  
+                },  
+                scales: {  
+                    y: {  
+                        beginAtZero: true,  
+                        min: 0,  
+                        max: 60000, 
+                        ticks: {  
+                            display: true, 
+                        }  
+                    },  
+                    x: {  
+                        ticks: {  
+                            display: true, 
+                        }  
+                    }  
+                }  
+            }  
+        });  
+    </script>  
   </body>
 </html>
