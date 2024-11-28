@@ -44,8 +44,7 @@ window.speechSynthesis.onvoiceschanged = () => {
   speech.voice = voices[0];
 
   voices.forEach(
-    (voice, i) =>
-      (voiceSelect.options[i] = new Option(voice.name.slice(10, 50), i))
+    (voice, i) => (voiceSelect.options[i] = new Option(voice.name, i))
   );
 };
 
