@@ -407,12 +407,12 @@ body {
   .slide-content {
     margin: 0 10px;
   }
-  p{
-  font-size: 16px;
-}
-h2{
-  font-size: 30px;
-}
+  p {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 30px;
+  }
 }
 @media (min-width: 769px) /*PC*/ {
   .hero-head {
@@ -432,11 +432,10 @@ h2{
   .hero-section {
     padding: 50px;
   }
-  .hero-head p{
-  font-size: 16px;
+  .hero-head p {
+    font-size: 16px;
+  }
+  .hero-head h2 {
+    font-size: 30px;
+  }
 }
-hero-head h2{
-  font-size: 30px;
-}
-}
-
